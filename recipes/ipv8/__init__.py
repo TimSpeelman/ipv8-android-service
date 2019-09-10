@@ -1,8 +1,10 @@
 from __future__ import absolute_import
+
 from os import getenv
-from os.path import join, exists
-from sh import mkdir, cp
+from os.path import exists, join
+
 from pythonforandroid.recipe import PythonRecipe, current_directory
+from sh import cp, mkdir
 
 
 class LocalIPV8Recipe(PythonRecipe):
@@ -14,7 +16,7 @@ class LocalIPV8Recipe(PythonRecipe):
 
     depends = ['cryptography', 'libsodium', 'netifaces',
                'python3', 'setuptools', 'twisted', 'lib2to3', 'libnacl', 'sqlite3', 'decorator', 'libnacl', 'six'
-              ]
+               ]
 
     patches = []
 
@@ -28,9 +30,12 @@ class LocalIPV8Recipe(PythonRecipe):
         super(LocalIPV8Recipe, self).postbuild_arch(arch)
 
         # Install twistd plugins
-        cp('-rf', join(self.get_build_dir(arch.arch), 'twisted', 'plugins'), join(self.ctx.get_python_install_dir(), 'twisted'))
-        
+        cp('-rf', join(self.get_build_dir(arch.arch), 'twisted', 'plugins'),
+           join(self.ctx.get_python_install_dir(), 'twisted'))
+
         # Copy ipv8_service.py
-        cp('-rf', join(self.get_build_dir(arch.arch), 'ipv8_service.py'), self.ctx.get_python_install_dir())
+        cp('-rf', join(self.get_build_dir(arch.arch), 'ipv8_service.py'),
+           self.ctx.get_python_install_dir())
+
 
 recipe = LocalIPV8Recipe()
