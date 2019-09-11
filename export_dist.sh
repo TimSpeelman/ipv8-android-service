@@ -11,7 +11,7 @@ p4a export_dist \
 --sdk_dir=$ANDROID_SDK_HOME \
 --ndk_dir=$ANDROID_NDK_HOME \
 --arch=armeabi-v7a \
---dist_name=IPV8Service \
+--dist_name=OpenWalletService \
 --bootstrap=service_only \
---requirements=ipv8 \
+--requirements=openwallet \
 ./dist

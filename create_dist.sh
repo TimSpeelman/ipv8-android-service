@@ -10,11 +10,11 @@ p4a create \
 --release \
 --sdk_dir=$ANDROID_SDK_HOME \
 --ndk_dir=$ANDROID_NDK_HOME \
---package=org.ipv8.android \
---service=Ipv8:Ipv8.py \
+--package=org.openwallet.android \
+--service=OpenWallet:OpenWallet.py \
 --private=./service \
---dist_name=IPV8Service \
+--dist_name=OpenWalletService \
 --bootstrap=service_only \
---requirements=ipv8 \
+--requirements=openwallet \
 --whitelist=.p4a-whitelist
 
