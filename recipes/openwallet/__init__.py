@@ -28,8 +28,8 @@ class OpenWalletRecipe(PythonRecipe):
         super(OpenWalletRecipe, self).postbuild_arch(arch)
 
         # # Install twistd plugins
-        # cp('-rf', join(self.get_build_dir(arch.arch), 'twisted', 'plugins'),
-        #    join(self.ctx.get_python_install_dir(), 'twisted'))
+        cp('-rf', join(self.get_build_dir(arch.arch), 'twisted', 'plugins'),
+           join(self.ctx.get_python_install_dir(), 'twisted'))
 
         # # Copy ipv8_service.py
         # cp('-rf', join(self.get_build_dir(arch.arch), 'ipv8_service.py'),

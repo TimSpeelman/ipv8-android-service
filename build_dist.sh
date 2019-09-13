@@ -4,14 +4,14 @@ set -e
 
 echo Build dist
 
-cd dist/IPV8Service
+cd dist/OpenWalletService
 
 python build.py \
---package=org.ipv8.android \
---service=Ipv8:Ipv8.py \
+--package=org.openwallet.android \
+--service=OpenWallet:OpenWallet.py \
 --private=../../service \
 --whitelist=../../.p4a-whitelist \
---name=IPv8 \
+--name=OpenWallet \
 --version=0.1
 
 cd ../..
