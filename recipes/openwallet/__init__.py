@@ -31,9 +31,9 @@ class OpenWalletRecipe(PythonRecipe):
         cp('-rf', join(self.get_build_dir(arch.arch), 'twisted', 'plugins'),
            join(self.ctx.get_python_install_dir(), 'twisted'))
 
-        # # Copy ipv8_service.py
-        # cp('-rf', join(self.get_build_dir(arch.arch), 'ipv8_service.py'),
-        #    self.ctx.get_python_install_dir())
+        # # Copy openwallet_service.py
+        cp('-rf', join(self.get_build_dir(arch.arch), 'openwallet_service.py'),
+           self.ctx.get_python_install_dir())
 
 
 recipe = OpenWalletRecipe()
