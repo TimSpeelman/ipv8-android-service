@@ -14,7 +14,7 @@ class OpenWalletRecipe(PythonRecipe):
 
     url = 'git+https://github.com/TimSpeelman/OpenWallet.git'
 
-    depends = ['ipv8', 'python3', 'twisted']
+    depends = ['ipv8', 'python2', 'twisted']
 
     patches = []
 
