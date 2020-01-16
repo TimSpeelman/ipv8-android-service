@@ -10,7 +10,6 @@ p4a create \
 --release \
 --sdk_dir=$ANDROID_SDK_HOME \
 --ndk_dir=$ANDROID_NDK_HOME \
---ndk_version=21 \
 --arch=armeabi-v7a \
 --package=org.openwallet.android \
 --service=OpenWallet:OpenWallet.py \
