@@ -18,4 +18,3 @@ p4a create \
 --bootstrap=service_only \
 --requirements=openwallet \
 --whitelist=.p4a-whitelist
-q
