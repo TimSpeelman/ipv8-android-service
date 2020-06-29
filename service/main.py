@@ -17,15 +17,7 @@ class OpenWalletService(object):
             format='%(levelname)s:%(message)s', level=logging.DEBUG)
 
     def run(self):
-        from twisted.internet import reactor
-        from twisted.plugins.openwallet_plugin import Options, service_maker
-
-        options = Options()
-        Options.parseOptions(options, os.getenv(
-            'PYTHON_SERVICE_ARGUMENT', '').split())
-        service_maker.makeService(options)
-        print("WILL RUN SERVICE")
-        reactor.run()
+        # TODO
 
 
 if __name__ == '__main__':

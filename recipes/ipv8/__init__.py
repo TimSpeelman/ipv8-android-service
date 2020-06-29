@@ -12,7 +12,7 @@ class LocalIPV8Recipe(PythonRecipe):
     Python-for-Android IPV8 recipe
     """
 
-    url = 'git+https://github.com/Tribler/py-ipv8.git'
+    url = 'git+https://github.com/TimSpeelman/py-ipv8/tree/open-wallet'
 
     # A list of any other recipe names
     # that must be built before this

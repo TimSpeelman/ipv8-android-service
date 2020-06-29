@@ -12,13 +12,13 @@ class OpenWalletRecipe(PythonRecipe):
     Python-for-Android OpenWallet recipe
     """
 
-    url = 'git+https://github.com/TimSpeelman/OpenWallet.git'
+    url = 'git+https://github.com/TimSpeelman/ow-android.git'
 
     depends = ['ipv8']
 
     patches = []
 
-    python_depends = ['requests', 'tinydb']
+    python_depends = []
 
     site_packages_name = 'openwallet'
 
@@ -27,12 +27,8 @@ class OpenWalletRecipe(PythonRecipe):
     def postbuild_arch(self, arch):
         super(OpenWalletRecipe, self).postbuild_arch(arch)
 
-        # # Install twistd plugins
-        cp('-rf', join(self.get_build_dir(arch.arch), 'twisted', 'plugins'),
-           join(self.ctx.get_python_install_dir(), 'twisted'))
-
         # # Copy openwallet_service.py
-        cp('-rf', join(self.get_build_dir(arch.arch), 'openwallet_service.py'),
+        cp('-rf', join(self.get_build_dir(arch.arch), 'ow_service.py'),
            self.ctx.get_python_install_dir())
 
 
