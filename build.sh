@@ -1,5 +1,5 @@
 #!/bin/bash
-
+trap 'exit 0' SIGTERM
 set -e
 
 export PATH="~/.local/bin/:$PATH"
