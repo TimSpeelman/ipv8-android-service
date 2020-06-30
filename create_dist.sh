@@ -16,5 +16,5 @@ p4a create \
 --private=./service \
 --dist_name=OpenWalletService \
 --bootstrap=service_only \
---requirements=openwallet \
+--requirements=ipv8 \
 --whitelist=.p4a-whitelist
