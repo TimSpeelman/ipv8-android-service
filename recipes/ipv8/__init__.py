@@ -41,6 +41,7 @@ class LocalIPV8Recipe(PythonRecipe):
     python_depends = [
                 'aiohttp_apispec', # [IPv8][?] unknown
                 'asynctest', # [IPv8][?] unknown
+                'marshmallow',
                 'hyperlink' # [sv]
                 ]
 
