@@ -1,6 +1,6 @@
-from pythonforandroid.recipe import CompiledComponentsPythonRecipe
+from pythonforandroid.recipe import CythonRecipe
 
-class MultidictRecipe(CompiledComponentsPythonRecipe):
+class MultidictRecipe(CythonRecipe):
     version = '4.7.5'
     url = 'https://github.com/aio-libs/multidict/archive/v{version}.zip'
     depends = ['setuptools']

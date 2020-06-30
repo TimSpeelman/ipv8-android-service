@@ -1,6 +1,6 @@
-from pythonforandroid.recipe import CompiledComponentsPythonRecipe
+from pythonforandroid.recipe import CythonRecipe
 
-class AioHTTPRecipe(CompiledComponentsPythonRecipe):
+class AioHTTPRecipe(CythonRecipe):
     version = '3.6.2'
     url = 'https://github.com/aio-libs/aiohttp/archive/v{version}.zip'
     depends = ['setuptools', 'multidict']
