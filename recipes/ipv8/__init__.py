@@ -29,11 +29,11 @@ class LocalIPV8Recipe(PythonRecipe):
                 'libnacl', # [IPv8][sv] unknown
                 'libsodium', # [sv] https://github.com/kivy/python-for-android/tree/master/pythonforandroid/recipes/libsodium
                 'netifaces', # [IPv8][sv] https://github.com/kivy/python-for-android/tree/master/pythonforandroid/recipes/netifaces
-                'pyasn1', # [IPv8][sv] unknown
+                'pyasn1', # [IPv8][sv] manual, from https://github.com/kivy/python-for-android/tree/3a9895ec6885986464471e9a3ad50a830f3644d7/pythonforandroid/recipes/pyasn1
                 'pyopenssl', # [IPv8] https://github.com/kivy/python-for-android/tree/master/pythonforandroid/recipes/pyopenssl
                 'python3', # [sv] https://github.com/kivy/python-for-android/tree/master/pythonforandroid/recipes/python3
                 'setuptools', # [sv] https://github.com/kivy/python-for-android/tree/master/pythonforandroid/recipes/setuptools
-                'lib2to3',  # [sv][local] unknown
+                # 'lib2to3',  # [sv][local] unknown
                 'sqlite3', # [sv]
                 'decorator' # [sv]
                ]
