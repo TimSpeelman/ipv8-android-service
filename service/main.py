@@ -13,7 +13,6 @@ class OpenWalletAndroidService(object):
         '''
         Setup environment
         '''
-        os.environ['ANDROID_PRIVATE'] = 'xyz'
         os.environ['PYTHON_EGG_CACHE'] = os.path.realpath(
             os.path.join(os.getenv('ANDROID_PRIVATE'), '../cache'))
 
