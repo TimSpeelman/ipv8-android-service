@@ -27,6 +27,8 @@ class OpenWalletRecipe(PythonRecipe):
     def postbuild_arch(self, arch):
         super(OpenWalletRecipe, self).postbuild_arch(arch)
 
+        print("OpenWalletRecipe postbuild")
+
         # # Copy openwallet_service.py
         cp('-rf', join(self.get_build_dir(arch.arch), 'ow_service.py'),
            self.ctx.get_python_install_dir())

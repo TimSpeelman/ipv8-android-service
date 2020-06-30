@@ -17,7 +17,10 @@ class OpenWalletService(object):
             format='%(levelname)s:%(message)s', level=logging.DEBUG)
 
     def run(self):
-        # TODO
+        print("OpenWalletService run xoxo")
+        logging.warning("OpenWalletService run xoxo warn")
+
+
 
 
 if __name__ == '__main__':
