@@ -13,5 +13,5 @@ p4a export_dist \
 --arch=armeabi-v7a \
 --dist_name=OpenWalletService \
 --bootstrap=service_only \
---requirements=openwallet \
+--requirements=ipv8 \
 ./dist
