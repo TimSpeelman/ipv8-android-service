@@ -42,7 +42,10 @@ class LocalIPV8Recipe(PythonRecipe):
                 'aiohttp_apispec', # [IPv8][?] unknown
                 'asynctest', # [IPv8][?] unknown
                 'marshmallow',
-                'hyperlink' # [sv]
+                'hyperlink', # [sv]
+                'apispec', # from `aiohttp_apispec`
+                'jinja2', # from `aiohttp_apispec`
+                'webargs' # from `aiohttp_apispec`
                 ]
 
     site_packages_name = 'ipv8'
