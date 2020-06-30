@@ -45,7 +45,8 @@ class LocalIPV8Recipe(PythonRecipe):
                 'hyperlink', # [sv]
                 'apispec', # from `aiohttp_apispec`
                 'jinja2', # from `aiohttp_apispec`
-                'webargs' # from `aiohttp_apispec`
+                'webargs', # from `aiohttp_apispec`
+                'markupsafe' # from `jinja2`
                 ]
 
     site_packages_name = 'ipv8'
