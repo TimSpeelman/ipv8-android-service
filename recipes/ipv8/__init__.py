@@ -23,8 +23,6 @@ class LocalIPV8Recipe(PythonRecipe):
     # [?]: Possibly unnecessary as not in sv, whilst in IPv8
     depends = [
                 'aiohttp', # [IPv8][?] unknown
-                'aiohttp_apispec', # [IPv8][?] unknown
-                'asynctest', # [IPv8][?] unknown
                 'cryptography', # [IPv8][sv] https://github.com/kivy/python-for-android/tree/master/pythonforandroid/recipes/cryptography
                 'libnacl', # [IPv8][sv] unknown
                 'libsodium', # [sv] https://github.com/kivy/python-for-android/tree/master/pythonforandroid/recipes/libsodium
@@ -40,7 +38,11 @@ class LocalIPV8Recipe(PythonRecipe):
 
     patches = []
 
-    python_depends = ['hyperlink'] # [sv]
+    python_depends = [
+                'aiohttp_apispec', # [IPv8][?] unknown
+                'asynctest', # [IPv8][?] unknown
+                'hyperlink' # [sv]
+                ]
 
     site_packages_name = 'ipv8'
 
