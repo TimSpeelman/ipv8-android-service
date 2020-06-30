@@ -8,7 +8,7 @@ export PATH="~/.local/bin/:$PATH"
 
 #copy bootstraps and recipes
 #cp -R bootstraps ~/.local/lib/python2.7/site-packages/pythonforandroid/
-# cp -R recipes ~/.local/lib/python2.7/site-packages/pythonforandroid/
+cp -R recipes ~/pythonforandroid/
 
 #create dist and build
 script -c "./clean_dist.sh"
