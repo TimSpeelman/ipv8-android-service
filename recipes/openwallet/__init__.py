@@ -29,7 +29,11 @@ class OpenWalletRecipe(PythonRecipe):
 
         print("OpenWalletRecipe postbuild")
 
-        # # Copy openwallet_service.py
+        # Copy static files (should not be needed right?)
+        cp('-rf', join(self.get_build_dir(arch.arch), 'ow_service', 'static'),
+           join(self.ctx.get_python_install_dir(), 'ow_service', 'static'))
+
+        # Copy openwallet_service.py
         cp('-rf', join(self.get_build_dir(arch.arch), 'ow_service.py'),
            self.ctx.get_python_install_dir())
 
