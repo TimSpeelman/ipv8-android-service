@@ -30,9 +30,12 @@ class OpenWalletAndroidService(object):
         parser.add_argument('--fresh', '-f', action='store_true', help='Refresh the identity')
         parser.add_argument('--loglevel', '-l', action='store', default='ERROR', choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], help='The log level')
 
-        service = OpenWalletService()
-
         args = parser.parse_args(sys.argv[1:])
+
+        print("OpenWalletService using arguments:")
+        print(args)
+
+        service = OpenWalletService()
         loop = get_event_loop()
         coro = service.start(args)
         ensure_future(coro)
