@@ -25,8 +25,10 @@ class OpenWalletAndroidService(object):
         logging.warning("OpenWalletService run xoxo warn")
         parser = argparse.ArgumentParser(add_help=False, description=('Starts OpenWallet as a service'))
         parser.add_argument('--help', '-h', action='help', default=argparse.SUPPRESS, help='Show this help message and exit')
-        # parser.add_argument('--no-rest-api', '-a', action='store_const', default=False, const=True, help='Autonomous: disable the REST api')
-        # parser.add_argument('--statistics', '-s', action='store_const', default=False, const=True, help='Enable IPv8 overlay statistics')
+        parser.add_argument('--port', '-p', action='store', type=int, default=8642, help='Port number')
+        parser.add_argument('--workdir', '-w', action='store', default='temp', help='The working directory')
+        parser.add_argument('--fresh', '-f', action='store_true', help='Refresh the identity')
+        parser.add_argument('--loglevel', '-l', action='store', default='ERROR', choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], help='The log level')
 
         service = OpenWalletService()
 
